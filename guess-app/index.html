@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="./styles/bootstrap.min.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1>Guess a number</h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <p>Select an option: </p>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="guessRadio" name="gameTypeRadio" class="custom-control-input" value="guess" onclick="changeGameType()" checked>
+                        <label class="custom-control-label" for="guessRadio">I want to guess</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="choiceNumberRadio" name="gameTypeRadio" class="custom-control-input" onclick="changeGameType()" value="choice">
+                        <label class="custom-control-label" for="choiceNumberRadio">I want to choose a number <span class="text-info">(think a number from 0 to 100)</span></label>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <button id="startGameBtn" class="btn btn-default mt-5" onclick="startGame()">Start!</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 mt-4" id="gameHeader"></div>
+                <div class="col-12" id="gameContainer"></div>
+                <div class="col-12" id="gameMessage"></div>
+            </div>
+        </div>
+    </body>
+
+    <script type="text/javascript" src="./scripts/game.js"></script>
+    <script type="text/javascript" src="./scripts/choiceGame.js"></script>
+    <script type="text/javascript" src="./scripts/guessGame.js"></script>
+    <script type="text/javascript" src="./scripts/main.js"></script>
+</html>
